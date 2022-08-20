@@ -7,7 +7,6 @@ import java.util.List;
 public class Simulation implements Runnable {
     @Override
     public void run() {
-        while (Statistics.getTotal() != 0) {
             Thread thread1 = new Thread(new SimulationStep());
             thread1.start();
             try {
@@ -16,7 +15,6 @@ public class Simulation implements Runnable {
             }
             Thread thread2 = new Thread(new Statistics());
             thread2.start();
-        }
     }
 
     class SimulationStep implements Runnable {

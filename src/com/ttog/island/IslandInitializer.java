@@ -36,7 +36,7 @@ public class IslandInitializer {
     }
 
     private void initIsland() {
-        Island.getInstance().initIsland(2, 2, 40);
+        Island.getInstance().initIsland(20, 20, 40);
     }
 
     private void initInhTypes() {
