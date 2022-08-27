@@ -2,7 +2,6 @@ package com.ttog.island.inhabitants;
 
 import com.ttog.island.Island;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,21 +29,6 @@ public abstract class Animal implements AnimalLife {
         this.x = x;
         setAppetite(getMaxAppetite() * 0.7);
         setCurrentWeight(getMaxWeight());
-        /*
-        * Наверное не стоит так делать
-        *
-        *
-        * */
-        if (this instanceof Herbivore) {
-            try {
-                Map<AnimalType, Integer> newEdibleMap = new HashMap<>();
-                newEdibleMap.put(AnimalType.PLANT, 100);
-
-                Method method = this.getClass().getMethod("initEdible", Map.class);
-                method.invoke(null, newEdibleMap);
-            } catch (Exception ignoreException) {
-            }
-        }
     }
 
     public Map<AnimalType, Integer> getEdibleMap() {

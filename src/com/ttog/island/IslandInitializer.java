@@ -117,6 +117,18 @@ public class IslandInitializer {
         edibleMap.put(CATERPILLAR, 90);
         Duck.initEdible(edibleMap);
         edibleMap.clear();
+
+        edibleMap.put(PLANT, 100);
+        Boar.initEdible(edibleMap);
+        Buffalo.initEdible(edibleMap);
+        Deer.initEdible(edibleMap);
+        Duck.initEdible(edibleMap);
+        Goat.initEdible(edibleMap);
+        Horse.initEdible(edibleMap);
+        Mouse.initEdible(edibleMap);
+        Rabbit.initEdible(edibleMap);
+        Sheep.initEdible(edibleMap);
+        edibleMap.clear();
     }
 
     private Map<AnimalType, Integer> createStartNumberOfInh() {
